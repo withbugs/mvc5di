@@ -49,6 +49,16 @@ namespace WebApplication2
             //services.AddSingleton<Models.ISomeClient, Models.SomeClient>();
 
             services.AddScoped<Services.ISomeService, Services.SomeService>();
+
+            // -------------------------------------------------------------------------------------------------->
+            // ISomeClient が AddTransient で注入されれば、次のコードで別の SomeClient インスタンスが生成される。
+            //services.AddScoped<Services.IScopedSomeService1, Services.SomeService>();
+            //services.AddScoped<Services.IScopedSomeService2, Services.SomeService>();
+
+            // ISomeClient が AddScoped で注入されても、次のコードで明示的に SomeClient インスタンスが生成することができる。
+            services.AddScoped<Services.IScopedSomeService1>(provider => new Services.SomeService(new Models.SomeClient()));
+            services.AddScoped<Services.IScopedSomeService2>(provider => new Services.SomeService(new Models.SomeClient()));
+            // <--------------------------------------------------------------------------------------------------
         }
     }
 

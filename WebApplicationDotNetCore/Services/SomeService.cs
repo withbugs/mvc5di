@@ -6,7 +6,7 @@ using WebApplicationDotNetCore.Models;
 
 namespace WebApplicationDotNetCore.Services
 {
-    public class SomeService : ISomeService
+    public class SomeService : ISomeService, IScopedSomeService1, IScopedSomeService2
     {
         private ISomeClient client;
         public SomeService(ISomeClient client)

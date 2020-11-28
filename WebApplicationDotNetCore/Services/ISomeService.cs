@@ -9,4 +9,11 @@ namespace WebApplicationDotNetCore.Services
     {
         string Greeting();
     }
+
+    public interface IScopedSomeService1 : ISomeService
+    {
+    }
+    public interface IScopedSomeService2 : ISomeService
+    {
+    }
 }

@@ -6,7 +6,7 @@ using WebApplication2.Models;
 
 namespace WebApplication2.Services
 {
-    public class SomeService : ISomeService
+    public class SomeService : IScopedSomeService1, IScopedSomeService2
     {
         private ISomeClient client;
         public SomeService(ISomeClient client)

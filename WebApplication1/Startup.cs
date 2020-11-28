@@ -34,6 +34,9 @@ namespace WebApplication1
             // ここから下に、DIしたいインターフェイスと具象クラスを記述
             //services.AddTransient<Models.ISomeClient, Models.SomeClient>();
             services.AddScoped<Models.ISomeClient, Models.SomeClient>();
+            //services.AddSingleton<Models.ISomeClient, Models.SomeClient>();
+
+            services.AddScoped<Services.ISomeService, Services.SomeService>();
         }
 
     }

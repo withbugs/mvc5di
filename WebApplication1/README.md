@@ -1,4 +1,7 @@
-﻿## NuGetをインストール
+﻿# この実装には不具合があります。WebApplication2の実装を使用してください。
+この実装はScopeの設定ができていないので、AddScoped が AddSingleton と同じ挙動となっている。
+
+## NuGetをインストール
 - [Microsoft.Extensions.DependencyInjection](https://www.nuget.org/packages/Microsoft.Extensions.DependencyInjection/)
 - [Microsoft.Owin.Host.SystemWeb](https://www.nuget.org/packages/Microsoft.Owin.Host.SystemWeb)
 
